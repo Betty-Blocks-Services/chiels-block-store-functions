@@ -1,0 +1,27 @@
+{
+  "description": "Description",
+  "label": "Get Current User",
+  "category": "Misc",
+  "icon": "CreateIcon",
+  "options": [{
+    "meta": {
+      "type": "JSON"
+    },
+    "name": "params",
+    "label": "Params",
+    "info": "The params to fetch the user from",
+    "advanced": false    
+  },
+  {
+    "meta": {
+      "type": "Output",
+      "output": {
+        "type": "Text"
+      }
+    },
+    "name": "result",
+    "label": "Result",
+    "info": "The result as the concatenated string"
+  }],
+  "yields": "NONE"
+}
