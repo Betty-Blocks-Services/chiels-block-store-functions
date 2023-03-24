@@ -2,7 +2,10 @@
   "description": "Description",
   "label": "Date Preset",
   "category": "Misc",
-  "icon": "CreateIcon",
+  "icon": {
+    "color": "Green",
+    "name": "PlusIcon"
+  },
   "options": [
     {
       "meta": {
@@ -21,19 +24,19 @@
       "name": "preset",
       "label": "Preset",
       "info": "The preset date you want to use",
-      "advanced": false    
+      "advanced": false
     },
     {
-    "meta": {
-      "type": "Output",
-      "output": {
-        "type": "Text"
-      }
-    },
-    "name": "result",
-    "label": "Result",
-    "info": "The result as a date"
-  }
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "Text"
+        }
+      },
+      "name": "result",
+      "label": "Result",
+      "info": "The result as a date"
+    }
   ],
   "yields": "NONE"
 }

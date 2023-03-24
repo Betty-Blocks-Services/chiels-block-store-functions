@@ -1,0 +1,5 @@
+{
+  "dependencies": ["date-fns"],
+  "functions": ["generateWordDocument 1.0"],
+  "includes": []
+}
