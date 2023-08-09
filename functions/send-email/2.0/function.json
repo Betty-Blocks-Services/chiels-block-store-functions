@@ -134,8 +134,10 @@
       "name": "body",
       "label": "Body Template",
       "info": "The HTML body of the email with LiquidJS support",
-      "placeholder" : "This field supports HTML, CSS and LiquidJS for easy templating",
-      "advanced": false
+      "advanced": false,
+      "configuration": {
+        "placeholder" : "This field supports HTML, CSS and LiquidJS for easy templating"
+      }
     },
     {
       "info": "Select all the variables you want to have available in the template with a key",
