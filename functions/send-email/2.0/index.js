@@ -1,4 +1,4 @@
-import groupBy from 'lodash.groupby';
+import _ from 'lodash';
 import Liquid from './liquid.min';
 
 const sendEmail = async ({
@@ -26,7 +26,7 @@ const sendEmail = async ({
     secure,
   };
   const engine = new Liquid();
-  engine.registerFilter('group', (collection, key) => groupBy(collection, key));
+  engine.registerFilter('group', (collection, key) => _.groupBy(collection, key));
 
   const renderedBody = engine.parseAndRenderSync(
     body,
