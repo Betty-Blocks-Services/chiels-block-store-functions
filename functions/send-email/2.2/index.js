@@ -4,6 +4,8 @@ import Liquid from './liquid.min';
 const mapAttachments = (attachmentsMap, attachmentsCol, attachmentProp) => {
   const attachments = [];
   attachmentsMap.map(({ key, value }) => {
+    if (!value) return;
+    if (!key) return;
     attachments.push({ filename: key, path: value && value.url ? value.url : value });
   });
 
@@ -11,7 +13,7 @@ const mapAttachments = (attachmentsMap, attachmentsCol, attachmentProp) => {
     const prop = attachmentProp[0].name;
     attachmentsCol.data.map((item) => {
       const fileName = item[prop].name;
-      const fileUrl = item[prop].url;
+      const fileUrl = item[prop].url && item[prop].url ? item[prop].url : item[prop];
       attachments.push({ filename: fileName, path: fileUrl });
     });
   }
