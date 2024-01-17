@@ -1,5 +1,5 @@
-import _ from 'lodash';
-import Liquid from './liquid.min';
+import _ from "lodash";
+import Liquid from "../../utils/liquid.min";
 
 const mapAttachments = (attachmentsMap, attachmentsCol, attachmentProp) => {
   const attachments = [];
@@ -20,7 +20,6 @@ const mapAttachments = (attachmentsMap, attachmentsCol, attachmentProp) => {
 
   return attachments;
 };
-
 
 const sendEmail = async ({
   host,
@@ -50,10 +49,10 @@ const sendEmail = async ({
     secure,
   };
 
-
   const engine = new Liquid();
-
-  engine.registerFilter('group', (collection, key) => _.groupBy(collection, key));
+  engine.registerFilter("group", (collection, key) =>
+    _.groupBy(collection, key)
+  );
 
   const renderedBody = engine.parseAndRenderSync(
     body,
@@ -62,12 +61,6 @@ const sendEmail = async ({
       return ctx;
     }, {}),
   );
-
-  // throw JSON.stringify(variables);
-  // const variableMap = variables.reduce((previousValue, currentValue) => {
-  //   previousValue[currentValue.key] = currentValue.value;
-  //   return previousValue;
-  // }, {});
 
 
   const mappedAttachments = mapAttachments(attachments, attachmentsCol, attachmentsColProperty);
@@ -88,12 +81,11 @@ const sendEmail = async ({
     attachments: mappedAttachments,
   };
 
-
-
   const sentMail = await smtp(smtpCredentials, mail);
 
   return {
     result: sentMail,
   };
 };
+
 export default sendEmail;
