@@ -165,6 +165,27 @@
       "name": "attachments"
     },
     {
+      "info": "Select the collection of attachments you want to send with this email.",
+      "label": "Attachments (collection)",
+      "meta": {
+        "type": "Collection"
+      },
+      "name": "attachmentsCol"
+    },
+    {
+      "info": "Select the property which contains the file in the collection",
+      "label": "Property",
+      "meta": {
+        "type": "Property",
+        "model": "attachmentsCol",
+        "allowedKinds": ["FILE"]
+      },
+      "configuration": {
+        "dependsOn": ["attachmentsCol"]
+      },
+      "name": "attachmentsColProperty"
+    },
+    {
       "meta": {
         "type": "Output",
         "output": {
