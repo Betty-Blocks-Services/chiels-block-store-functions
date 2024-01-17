@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import Liquid from './liquid.min';
+import Liquid from '../../utils/liquid.min';
 
 const mapAttachments = (attachmentsMap, attachmentsCol, attachmentProp) => {
   const attachments = [];

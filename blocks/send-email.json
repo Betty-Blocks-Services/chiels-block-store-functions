@@ -1,5 +1,5 @@
 {
   "dependencies": ["lodash"],
-  "functions": ["sendEmail 2.1"],
-  "includes": []
+  "functions": ["sendEmail 2.2"],
+  "includes": ["./functions/utils"]
 }
