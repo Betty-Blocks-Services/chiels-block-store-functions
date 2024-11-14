@@ -10,7 +10,7 @@
     {
       "meta": {
         "type": "Value",
-        "allowedKinds": ["STRING", "INTEGER"],
+        "allowedKinds": ["STRING"],
         "validations": { "required": true }
       },
       "name": "host",
@@ -24,7 +24,7 @@
     {
       "meta": {
         "type": "Value",
-        "allowedKinds": ["STRING"],
+        "allowedKinds": ["STRING", "INTEGER"],
         "validations": { "required": true }
       },
       "name": "port",
