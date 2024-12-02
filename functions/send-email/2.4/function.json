@@ -1,5 +1,5 @@
 {
-  "description": "Send an e-mail using SMTP credentials v2.3",
+  "description": "Send an e-mail using SMTP credentials v2.4",
   "label": "Send Email",
   "category": "External",
   "icon": {
